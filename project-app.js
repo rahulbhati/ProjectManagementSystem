@@ -5,15 +5,20 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
+
+
 var usersRouter = require('./routes/users');
 
 var projectapp = express();
+
+
 
 // view engine setup
 projectapp.set('views', path.join(__dirname, 'views'));
 projectapp.engine('html', require('ejs').renderFile);
 projectapp.set('view engine', 'html');
 
+projectapp.set('isLocal', true);
 
 projectapp.use(logger('dev'));
 projectapp.use(express.json());
