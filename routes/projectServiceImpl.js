@@ -18,7 +18,8 @@ router.post('/add-project',function(req, res){
 
 /* GET list of projects. */
 router.get('/get-project-list', function(req, res, next) {
-        res.end(dao.localProjectsJson());
+        //res.end(dao.localProjectsJson());
+        res.end(dao.mysqlProjectjson());
   });
 
 /* GET project by Id */

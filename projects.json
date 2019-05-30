@@ -1,10 +1,1 @@
-{
-    "project#1": {
-        "record-id": 1,
-        "name": "Project#1-Name",
-        "scrum-master": "Project#1-Scrum-Master-Name",
-        "description": "Project#1-Description",
-        "team-members": 5
-    }
-   
-}
+{"project#1":{"record-id":1,"name":"Project#1-Name","scrum-master":"Project#1-Scrum-Master-Name","description":"Project#1-Description","team-members":5},"project#2":{"record-id":1,"name":"Project#1-Name","scrum-master":"Project#1-Scrum-Master-Name","description":"Project#1-Description","team-members":5},"project#3":{"record-id":1,"name":"Project#1-Name","scrum-master":"Project#1-Scrum-Master-Name","description":"Project#1-Description","team-members":5}}
