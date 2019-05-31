@@ -4,8 +4,10 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
+var indexRouter = require('./routes/projectServiceImpl');
+
 var usersRouter = require('./routes/users');
+var localRouter = require('./routes/localJsonServiceImpl');
 
 var projectapp = express();
 
@@ -14,6 +16,7 @@ projectapp.set('views', path.join(__dirname, 'views'));
 projectapp.engine('html', require('ejs').renderFile);
 projectapp.set('view engine', 'html');
 
+projectapp.set('isLocal', true);
 
 projectapp.use(logger('dev'));
 projectapp.use(express.json());
@@ -23,6 +26,7 @@ projectapp.use(express.static(path.join(__dirname, 'public')));
 
 projectapp.use('/', indexRouter);
 projectapp.use('/users', usersRouter);
+projectapp.use('/local', localRouter);
 
 // catch 404 and forward to error handler
 projectapp.use(function(req, res, next) {
