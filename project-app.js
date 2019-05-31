@@ -7,6 +7,7 @@ var logger = require('morgan');
 var indexRouter = require('./routes/projectServiceImpl');
 
 var usersRouter = require('./routes/users');
+var localRouter = require('./routes/localJsonServiceImpl');
 
 var projectapp = express();
 
@@ -25,6 +26,7 @@ projectapp.use(express.static(path.join(__dirname, 'public')));
 
 projectapp.use('/', indexRouter);
 projectapp.use('/users', usersRouter);
+projectapp.use('/local', localRouter);
 
 // catch 404 and forward to error handler
 projectapp.use(function(req, res, next) {

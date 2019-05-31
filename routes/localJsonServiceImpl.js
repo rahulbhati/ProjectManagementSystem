@@ -5,7 +5,7 @@ var fs = require("fs");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+        res.send("<html><head></head><body>Local </body></html>");
 });
 
 /* Add project */
